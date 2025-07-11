@@ -1,0 +1,55 @@
+:root {
+  --appleGreen: #8EA604;
+  --primary: #8EA604;
+  --blue: #2563eb;
+  --gray: #444;
+}
+.header {
+  width: 100%;
+  background: #fff;
+  color: #111;
+  box-shadow: 0 2px 8px 0 rgba(0,0,0,0.08);
+  padding: 0;
+}
+.header__container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px;
+}
+.header__home {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 2rem;
+  font-weight: bold;
+  color: var(--blue);
+  text-decoration: none;
+  white-space: nowrap;
+}
+.header__home img {
+  height: 40px;
+  width: 40px;
+  object-fit: contain;
+  display: block;
+}
+.header__nav {
+  display: none;
+}
+@media (min-width: 768px) {
+  .header__nav {
+    display: flex;
+    gap: 24px;
+  }
+}
+.header__link {
+  color: var(--gray);
+  text-decoration: none;
+  font-size: 1rem;
+  transition: color 0.2s;
+}
+.header__link:hover {
+  color: var(--blue);
+} 

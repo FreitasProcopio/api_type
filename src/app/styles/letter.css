@@ -1,0 +1,135 @@
+:root {
+  --primary: #8EA604;
+  --secondary: #F5BB00;
+  --accent: #EC9F05;
+  --warning: #D76A03;
+  --danger: #BF3100;
+  --text-main: #111;
+  --bg-main: #fff;
+}
+
+.letter-section {
+  width: 100%;
+  background: var(--bg-main);
+  color: var(--text-main);
+  padding: 48px 16px;
+}
+.letter-section .container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+.letter-section__title {
+  font-size: 2.5rem;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 40px;
+}
+.letter-section__grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 48px;
+}
+@media (min-width: 768px) {
+  .letter-section__grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+@media (min-width: 1024px) {
+  .letter-section__grid {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+.letter-section__card {
+  background: #fff;
+  border: 2px solid var(--primary);
+  border-radius: 18px;
+  box-shadow: 0 2px 16px 0 rgba(0,0,0,0.08);
+  padding: 32px;
+  transition: box-shadow 0.3s, border-color 0.3s, transform 0.35s cubic-bezier(0.4,0,0.2,1);
+  opacity: 1;
+  transform: translateX(0);
+}
+.letter-section__card:hover {
+  box-shadow: 0 6px 32px 0 rgba(0,0,0,0.16);
+  border-color: #5c7300;
+}
+.letter-section__card.slide-out {
+  transform: translateX(60px);
+}
+.letter-section__card.slide-in {
+  transform: translateX(-60px);
+}
+.letter-section__card-title {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: var(--primary);
+  margin-bottom: 8px;
+}
+.letter-section__card p {
+  margin: 6px 0;
+  color: #444;
+  font-size: 1rem;
+}
+
+.letter-carousel {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+.letter-carousel-row {
+  display: flex;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  gap: 32px;
+  padding-bottom: 8px;
+}
+.letter-carousel-row::-webkit-scrollbar {
+  display: none;
+}
+.letter-carousel-arrow {
+  background: var(--primary);
+  color: #fff;
+  border: none;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  font-size: 1.5rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 2;
+  opacity: 0.8;
+  transition: opacity 0.2s;
+}
+.letter-carousel-arrow:hover {
+  opacity: 1;
+}
+.letter-carousel-arrow.left {
+  left: -28px;
+}
+.letter-carousel-arrow.right {
+  right: -28px;
+}
+.letter-carousel-row-wrapper {
+  position: relative;
+  width: 100%;
+}
+@media (max-width: 768px) {
+  .letter-carousel-row {
+    gap: 16px;
+  }
+  .letter-section__card {
+    min-width: 260px;
+    max-width: 320px;
+  }
+}
+@media (min-width: 769px) {
+  .letter-section__card {
+    min-width: 320px;
+    max-width: 360px;
+  }
+} 

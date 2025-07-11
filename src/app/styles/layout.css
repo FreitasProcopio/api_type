@@ -1,0 +1,22 @@
+:root {
+  --font-main: 'Inter', Arial, Helvetica, sans-serif;
+  --bg-main: #fff;
+  --text-main: #111;
+}
+.layout-html {
+  min-height: 100vh;
+}
+.layout-body {
+  min-height: 100vh;
+  background: var(--bg-main);
+  color: var(--text-main);
+  font-family: var(--font-main);
+  display: flex;
+  flex-direction: column;
+}
+.layout-main {
+  flex: 1;
+  padding: 24px;
+  background: var(--bg-main);
+  color: var(--text-main);
+} 
